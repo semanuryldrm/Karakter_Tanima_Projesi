@@ -6,7 +6,6 @@ from sklearn.svm import SVC
 from skimage.feature import hog
 from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 
 def log(msg):
     print(f"[SİSTEM] {msg}")
@@ -75,16 +74,13 @@ for i, (img, label) in enumerate(zip(X_small, y_small)):
 
 print("\n" + "-" * 50)
 
-# --- 3.1 YEREL VERİ EKLEME (DEVRE DIŞI BIRAKILDI) ---
-# Bu bölüm kullanıcı isteği üzerine temizlendi ancak satır yapısı korunuyor.
-
-# --- 4. TRAIN / TEST AYRIMI (SINAV HAZIRLIĞI) ---
+# --- 4. TRAIN / TEST AYRIMI ---
 log("4. Veri Seti Bölünüyor (Eğitim vs Test)...")
-# Verinin %80'i ile çalışacak, %20'si ile sınav olacak.
+# Verinin %80'i ile çalışacak, %20'si ayrılacak 
 X_train, X_test, y_train, y_test = train_test_split(features_list, labels_list, test_size=0.2, random_state=42)
 
 log(f"   Eğitim Verisi: {len(X_train)} adet")
-log(f"   Test Verisi  : {len(X_test)} adet (Model bunu hiç görmeyecek)")
+log(f"   Test Verisi  : {len(X_test)} adet")
 
 # --- 5. EĞİTİM (MAX PERFORMANS) ---
 log("5. Model Eğitiliyor (Bu işlem işlemciyi zorlayabilir)...")
@@ -92,33 +88,14 @@ start_time = time.time()
 
 # verbose=True: O akan sayıları görmek için korundu.
 model = SVC(kernel='rbf', C=10, gamma='scale', probability=True, verbose=True)
+# Sadece X_train ile eğitiliyor
 model.fit(X_train, y_train)
 
 end_time = time.time()
 print(f"\n   >> Eğitim Süresi: {end_time - start_time:.1f} saniye")
 
-# --- 6. DOĞRULUK VE ANALİZ TESTİ ---
-log("6. Performans Analizi Yapılıyor...")
-
-# Öğrenme başarısını ölçmek için eğitim verisi tahmini
-train_pred = model.predict(X_train)
-ogrenme_basarisi = accuracy_score(y_train, train_pred) * 100
-
-# Test başarısını ölçmek için test verisi tahmini
-y_pred = model.predict(X_test)
-test_basarisi = accuracy_score(y_test, y_pred) * 100
-
-print("=" * 60)
-print(f"   ÖĞRENME BAŞARISI (Eğitim Skoru) : %{ogrenme_basarisi:.2f}")
-print(f"   TEST BAŞARISI    (Genelleme Skoru) : %{test_basarisi:.2f}")
-print("=" * 60)
-
-if test_basarisi > 85:
-    print("   SONUÇ: Mükemmel! Model üretime hazır.")
-elif test_basarisi > 75:
-    print("   SONUÇ: Gayet iyi, çoğu harfi tanır.")
-else:
-    print("   SONUÇ: Biraz daha veriye ihtiyaç olabilir.")
+# --- 6. DOĞRULUK VE ANALİZ TESTİ (KALDIRILDI) ---
+# Bu bölüm kullanıcı isteği üzerine performans_olcum.py dosyasına taşınmak üzere buradan silindi.
 
 # --- 7. KAYIT ---
 log("7. Kaydediliyor...")
