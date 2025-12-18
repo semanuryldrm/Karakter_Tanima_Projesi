@@ -134,8 +134,7 @@ Eğer modelleri kendi bilgisayarınızda yeniden eğitmek isterseniz şu komutla
 python egitim.py        # Ana modeli (Harf+Rakam) eğitir (~15-20 dk)
 python egitim_rakam.py  # Rakam uzmanını eğitir (~1 dk)
 ```
-
-    ---
+---
 
 ## 📂 Dosya Yapısı
 
@@ -147,7 +146,7 @@ python egitim_rakam.py  # Rakam uzmanını eğitir (~1 dk)
 | `performans_olcum.py` | 📊 Hibrit sistemin (Ana Model + Rakam Uzmanı) birlikte çalıştığı senaryoyu simüle eden ve gerçek başarıyı ölçen test aracı. |
 | `toplanan_veriler/` | 💾 Kullanıcının geri bildirimleriyle (Doğru/Yanlış) kaydedilen yeni veri örnekleri. |
 
-    ---
+---
 
 ## 🔮 Gelecek Planları (Roadmap)
 
