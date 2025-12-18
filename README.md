@@ -1,11 +1,13 @@
-# Visionary OCR: Hibrit Mimarili El Yazısı Tanıma Sistemi 🧠✍️
+# Karakter Tanıma Projesi 🧠✍️
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue?style=flat&logo=python)
+![Course](https://img.shields.io/badge/Ders-Örüntü%20Tanıma-blue)
 ![ML](https://img.shields.io/badge/Machine%20Learning-SVC-green?style=flat)
-![Dataset](https://img.shields.io/badge/Dataset-EMNIST%20%26%20MNIST-yellow)
-![Status](https://img.shields.io/badge/Status-Aktif%20Geliştirme-orange)
+![Status](https://img.shields.io/badge/Status-Tamamlandı-success)
 
-> **Visionary OCR**, kullanıcıların çizim tablası üzerine yazdığı el yazısı karakterleri (harf ve rakam) gerçek zamanlı olarak algılayan, **Görüntü İşleme (HOG)** ve **Makine Öğrenmesi (SVC)** tekniklerini birleştiren ileri seviye bir yapay zeka projesidir.
+> **Bu proje, Örüntü Tanıma dersi kapsamında geliştirilmiştir.**
+> 
+> Kullanıcıların çizim tablası üzerine yazdığı el yazısı karakterleri (harf ve rakam) algılayan, **Görüntü İşleme (HOG)** ve **Makine Öğrenmesi (SVC)** tekniklerini birleştiren hibrit bir karakter tanıma uygulamasıdır.
 
 ---
 
