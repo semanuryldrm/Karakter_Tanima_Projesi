@@ -141,8 +141,7 @@ python egitim_rakam.py  # Rakam uzmanını eğitir (~1 dk)
 | `arayuz.py` | 🎨 Kullanıcının çizim yapabileceği, Tkinter tabanlı GUI. Tahmin yapar ve veri toplar. |
 | `egitim.py` | 🧠 **Ana Modeli** (EMNIST verisi ile) eğiten script. |
 | `egitim_rakam.py` | 🔢 **Rakam Uzmanını** (MNIST verisi ile) eğiten script. |
-| `performans_olcum.py` | 📊 Modellerin başarı durumlarını test eden analiz aracı. |
-| `performans_kombine.py` | 🤝 İki modelin birlikte çalıştığı senaryoyu simüle eden test aracı. |
+| `performans_olcum.py` | 📊 Hibrit sistemin (Ana Model + Rakam Uzmanı) birlikte çalıştığı senaryoyu simüle eden ve gerçek başarıyı ölçen test aracı. |
 | `toplanan_veriler/` | 💾 Kullanıcının geri bildirimleriyle (Doğru/Yanlış) kaydedilen yeni veri örnekleri. |
 
 ## 🔮 Gelecek Planları (Roadmap)
