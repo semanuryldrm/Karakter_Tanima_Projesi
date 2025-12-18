@@ -94,10 +94,8 @@ model.fit(X_train, y_train)
 end_time = time.time()
 print(f"\n   >> Eğitim Süresi: {end_time - start_time:.1f} saniye")
 
-# --- 6. DOĞRULUK VE ANALİZ TESTİ (KALDIRILDI) ---
-# Bu bölüm kullanıcı isteği üzerine performans_olcum.py dosyasına taşınmak üzere buradan silindi.
 
-# --- 7. KAYIT ---
-log("7. Kaydediliyor...")
+# --- 6. KAYIT ---
+log("6. Kaydediliyor...")
 joblib.dump(model, "ocr_config.pkl")
 log("TAMAMLANDI. Yeni modeliniz hazır.")
